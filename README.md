@@ -14,4 +14,4 @@ HSBNE Maintains a number of RepRaps, this repo allows versioning and tweaking of
 Stick to whatever convention is detailed above, feel free to suggest a new structure.
 
 If you wish to modify an existing configuration, please attach a comparison photo 
-of before/after to prove your changes are beneficial.
+of before/after to your pull request so you can prove your changes are beneficial.
