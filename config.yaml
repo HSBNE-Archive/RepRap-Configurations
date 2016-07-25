@@ -1,0 +1,182 @@
+accessControl:
+  autologinAs: guest
+  autologinLocal: true
+  localNetworks:
+  - 10.0.0.0/16
+  salt: H3Qcr6Suoh4EVkXsRZQ4pyWR6arcTISN
+api:
+  allowCrossOrigin: true
+  key: 11F6FACA51654DDF9450F0E95F475B84
+appearance:
+  color: green
+  components:
+    disabled:
+      sidebar:
+      - files
+    order:
+      tab:
+      - plugin_filetab
+  name: Pelrun's Prusa i2 printer
+controls:
+- children:
+  - command: M80
+    name: Power On
+    type: command
+  - command: M81
+    name: Power Off
+    type: command
+  layout: horizontal
+  name: PSU
+  type: section
+events:
+  subscriptions:
+  - command: 'youtube-upload --client-secrets=/home/pi/client-secrets-youtube-upload.json
+      --title="Timelapse: {gcode}" --playlist="3D printing timelapses" --description="Timelapse
+      of {gcode}, printed on pelrun-i2@HSBNE by Octoprint" --tags="reprap,timelapse,octoprint,hsbne"
+      "{movie}"'
+    debug: false
+    event: MovieDone
+    type: system
+  - command: wget -O /dev/null http://themes.hsbne.org/playmp3.php?nickname=pelrun-i2
+    debug: false
+    event: PrintDone
+    type: system
+feature:
+  sdSupport: false
+gcodeViewer: {}
+plugins:
+  _disabled:
+  - printhistory
+  announcements:
+    channels:
+      _important:
+        read_until: 1460575175
+      _octopi:
+        read_until: 1462200600
+      _plugins:
+        read_until: 1461628800
+      _releases:
+        read_until: 1465459200
+  cura:
+    cura_engine: /usr/local/bin/cura_engine
+  discovery:
+    publicPort: 80
+    upnpUuid: 1e41931c-e562-4631-bc9c-4105467dc508
+  slack:
+    _config_version: 3
+    bot_icon_emoji: ':printer:'
+    bot_username: pelrun-i2
+    print_events:
+      PrintFailed:
+        Enabled: false
+    webhook_url: https://hooks.slack.com/services/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
+  softwareupdate:
+    _config_version: 4
+    checks:
+      octoprint:
+        checkout_folder: /home/pi/OctoPrint
+  touchui:
+    error: false
+    hasCustom: false
+    hasLESS: false
+    refreshCSS: false
+    requireNewCSS: false
+    whatsNew: false
+printerParameters: {}
+printerProfiles:
+  defaultProfile:
+    axes:
+      e:
+        inverted: false
+        speed: 300
+      x:
+        inverted: false
+        speed: 6000
+      y:
+        inverted: false
+        speed: 6000
+      z:
+        inverted: false
+        speed: 200
+    color: yellow
+    extruder:
+      count: 1
+      nozzleDiameter: 0.4
+      offsets:
+      - - 0.0
+        - 0.0
+    heatedBed: true
+    id: _default
+    model: Prusa i2
+    name: Pelrun I2
+    volume:
+      depth: 180.0
+      formFactor: rectangular
+      height: 85.0
+      origin: lowerleft
+      width: 180.0
+serial:
+  additionalPorts:
+  - /dev/ttyAMA*
+  autoconnect: true
+  baudrate: 250000
+  port: /dev/ttyAMA0
+  timeout:
+    communication: 15.0
+    temperature: 15.0
+server:
+  commands:
+    serverRestartCommand: sudo service octoprint restart
+    systemRestartCommand: sudo shutdown -r now
+    systemShutdownCommand: sudo halt
+  firstRun: false
+  secretKey: b82FSsV029sGktb29PWDw2gSVmjr2SET
+slicing:
+  defaultProfiles:
+    cura: pla-0.3
+system:
+  actions:
+  - action: shutdown
+    async: true
+    command: sudo shutdown -h now
+    confirm: You are about to shutdown the system.
+    ignore: true
+    name: Shutdown
+  - action: reboot
+    async: true
+    command: sudo shutdown -r now
+    confirm: You are about to reboot the system
+    ignore: true
+    name: Reboot
+  - action: restart
+    async: true
+    command: sudo service octoprint restart
+    confirm: You are about to restart OctoPrint
+    ignore: true
+    name: Restart OctoPrint
+  - action: divider
+  - action: resetmcu
+    command: ~/scripts/resetmcu.sh
+    confirm: You are about to reset the printer electronics. This will interfere with
+      any running print.
+    name: Reset MCU
+temperature:
+  profiles:
+  - bed: '110'
+    extruder: '240'
+    name: ABS
+  - bed: 60
+    extruder: '220'
+    name: PLA
+webcam:
+  bitrate: 4000k
+  ffmpeg: /usr/bin/avconv
+  snapshot: http://127.0.0.1:8080/?action=snapshot
+  stream: /webcam/?action=stream
+  timelapse:
+    fps: 24
+    options:
+      interval: 10
+    postRoll: 1
+    type: timed
+  watermark: false
