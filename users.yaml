@@ -1,0 +1,15 @@
+guest:
+  active: true
+  apikey: null
+  password: 76f2cbcd3f1c6e65dfe68668cd816a417df3c1d080de5d7f16de3fe3fbaa55e64df9bdfae735703d55bcc71683b19277309dba093bc2498e05199e8d6e38ddee
+  roles:
+  - user
+  settings: {}
+pelrun:
+  active: true
+  apikey: null
+  password: 6132b3a78f6abedb6751a35aed79ba9d4c76127f5332401d5f6ce1b2e0059b2392ef80bc9dd515bcc0aaa85175e083f0e7abb46792b155153d6b83554aee8308
+  roles:
+  - user
+  - admin
+  settings: {}

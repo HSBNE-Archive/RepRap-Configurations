@@ -1,0 +1,105 @@
+accessControl:
+  autologinAs: guest
+  autologinLocal: true
+  localNetworks:
+  - 10.0.0.0/16
+  salt: 3BYXofdDwM8dPiq2CthBmiJkO2mFLRgR
+api:
+  key: BD5599F2898C4CA8B6702759993A8198
+appearance:
+  color: violet
+  name: Space Prusa i2
+feature: {}
+gcodeViewer: {}
+plugins:
+  announcements:
+    channels:
+      _important:
+        read_until: 1460575175
+  cura:
+    cura_engine: /usr/local/bin/cura_engine
+  discovery:
+    publicPort: 80
+    upnpUuid: f15ab4de-f785-4a96-bdbe-22fb9a80ebc5
+  slack:
+    _config_version: 3
+    bot_icon_emoji: ':printer:'
+    bot_username: space-i2
+    webhook_url: https://hooks.slack.com/services/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
+  softwareupdate:
+    _config_version: 4
+    checks:
+      octoprint:
+        checkout_folder: /home/pi/OctoPrint
+printerParameters: {}
+printerProfiles:
+  defaultProfile:
+    axes:
+      e:
+        inverted: false
+        speed: 300
+      x:
+        inverted: false
+        speed: 6000
+      y:
+        inverted: false
+        speed: 6000
+      z:
+        inverted: false
+        speed: 200
+    color: yellow
+    extruder:
+      count: 1
+      nozzleDiameter: 0.4
+      offsets:
+      - - 0.0
+        - 0.0
+    heatedBed: true
+    id: _default
+    model: Prusa I2
+    name: Default
+    volume:
+      depth: 170.0
+      formFactor: rectangular
+      height: 90.0
+      origin: lowerleft
+      width: 170.0
+serial:
+  autoconnect: true
+  baudrate: 0
+  port: /dev/ttyUSB0
+  timeout: {}
+server:
+  commands:
+    serverRestartCommand: sudo service octoprint restart
+    systemRestartCommand: sudo shutdown -r now
+  firstRun: false
+  secretKey: K9Y7ZGw2aNc7c8Pm0UWe5bXkamQrnDGa
+slicing:
+  defaultProfiles:
+    cura: space-i2
+system:
+  actions:
+  - action: shutdown
+    async: true
+    command: sudo shutdown -h now
+    confirm: You are about to shutdown the system.
+    ignore: true
+    name: Shutdown
+  - action: reboot
+    async: true
+    command: sudo shutdown -r now
+    confirm: You are about to reboot the system
+    ignore: true
+    name: Reboot
+  - action: restart
+    async: true
+    command: sudo service octoprint restart
+    confirm: You are about to restart OctoPrint
+    ignore: true
+    name: Restart OctoPrint
+temperature: {}
+webcam:
+  ffmpeg: /usr/bin/avconv
+  snapshot: http://127.0.0.1:8080/?action=snapshot
+  stream: /webcam/?action=stream
