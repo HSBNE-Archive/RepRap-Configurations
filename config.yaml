@@ -1,0 +1,118 @@
+accessControl:
+  autologinAs: guest
+  autologinLocal: true
+  localNetworks:
+  - 10.0.0.0/16
+  salt: ofveZnTRKgyNjzo6nZexEpi5y7xzQJ5Q
+api:
+  key: 587186F55E6A41A78A06B038C2E681C8
+appearance:
+  color: red
+  name: Space Taz 5
+feature: {}
+gcodeViewer: {}
+events:
+  subscriptions:
+  - command: wget -O /dev/null http://themes.hsbne.org/playmp3.php?nickname=space-taz5
+    debug: false
+    event: PrintDone
+    type: system
+plugins:
+  announcements:
+    channels:
+      _important:
+        read_until: 1460575175
+  cura:
+    cura_engine: /usr/local/bin/cura_engine
+  discovery:
+    publicPort: 80
+    upnpUuid: 1699e2f0-c433-44fd-9846-dabe8c92c6f8
+  slack:
+    _config_version: 3
+  softwareupdate:
+    _config_version: 4
+    checks:
+      octoprint:
+        checkout_folder: /home/pi/OctoPrint
+        type: github_release
+printerParameters: {}
+printerProfiles:
+  defaultProfile:
+    axes:
+      e:
+        inverted: false
+        speed: 300
+      x:
+        inverted: false
+        speed: 6000
+      y:
+        inverted: false
+        speed: 6000
+      z:
+        inverted: false
+        speed: 200
+    color: red
+    extruder:
+      count: 1
+      nozzleDiameter: 0.5
+      offsets:
+      - - 0.0
+        - 0.0
+    heatedBed: true
+    id: _default
+    model: Lulzbot Taz 5
+    name: Default
+    volume:
+      depth: 275.0
+      formFactor: rectangular
+      height: 250.0
+      origin: lowerleft
+      width: 290.0
+serial:
+  autoconnect: true
+  port: /dev/ttyACM0
+  timeout: {}
+server:
+  commands:
+    serverRestartCommand: sudo service octoprint restart
+    systemRestartCommand: sudo shutdown -r now
+  firstRun: false
+  secretKey: tn9hOOfKqptjJv6x23M5BXgflxrDwAN7
+slicing:
+  defaultProfiles:
+    cura: ngen_medium-quality
+system:
+  actions:
+  - action: shutdown
+    async: true
+    command: sudo shutdown -h now
+    confirm: You are about to shutdown the system.
+    ignore: true
+    name: Shutdown
+  - action: reboot
+    async: true
+    command: sudo shutdown -r now
+    confirm: You are about to reboot the system
+    ignore: true
+    name: Reboot
+  - action: restart
+    async: true
+    command: sudo service octoprint restart
+    confirm: You are about to restart OctoPrint
+    ignore: true
+    name: Restart OctoPrint
+temperature:
+  profiles:
+  - bed: 100
+    extruder: 210
+    name: ABS
+  - bed: 60
+    extruder: 180
+    name: PLA
+  - bed: '85'
+    extruder: '235'
+    name: nGen
+webcam:
+  ffmpeg: /usr/bin/avconv
+  snapshot: http://127.0.0.1:8080/?action=snapshot
+  stream: /webcam/?action=stream
