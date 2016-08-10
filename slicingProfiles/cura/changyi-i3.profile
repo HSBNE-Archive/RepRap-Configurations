@@ -143,7 +143,7 @@ object_sink: 0.0
 ooze_shield: false
 outer_shell_speed: 50
 overlap_dual: 0.15
-platform_adhesion: brim
+platform_adhesion: none
 print_bed_temperature: 75
 print_speed: 90
 print_temperature:
@@ -168,7 +168,7 @@ retraction_min_travel: 1.5
 retraction_minimal_extrusion: 0.02
 retraction_speed: 50
 skirt_gap: 3.0
-skirt_line_count: true
+skirt_line_count: 3
 skirt_minimal_length: 150.0
 solid_bottom: true
 solid_layer_thickness: true
