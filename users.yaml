@@ -5,6 +5,14 @@ guest:
   roles:
   - user
   settings: {}
+hsbne:
+  active: true
+  apikey: null
+  password: 88fb3e4582d39c83fc9f7ab46beef6f3da0faaf88bc6a98b1046a598b3fcc3cf4ea4e83a523a0c7bd38e5c11e4083931cb11e0a3d3e3a06f12089e72a1bc6254
+  roles:
+  - user
+  - admin
+  settings: {}
 pelrun:
   active: true
   apikey: null

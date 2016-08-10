@@ -9,7 +9,8 @@ api:
 appearance:
   color: violet
   name: Space Prusa i2
-feature: {}
+feature:
+  sdSupport: false
 gcodeViewer: {}
 plugins:
   announcements:
@@ -31,6 +32,11 @@ plugins:
     checks:
       octoprint:
         checkout_folder: /home/pi/OctoPrint
+  touchui:
+    hasCustom: false
+    refreshCSS: false
+    requireNewCSS: false
+    whatsNew: false
 printerParameters: {}
 printerProfiles:
   defaultProfile:
@@ -67,6 +73,7 @@ printerProfiles:
 serial:
   autoconnect: true
   baudrate: 0
+  maxCommunicationTimeouts: {}
   port: /dev/ttyUSB0
   timeout: {}
 server:
