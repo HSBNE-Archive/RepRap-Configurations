@@ -2,7 +2,6 @@ _description: Imported from changyi-i3.ini on 2016-07-12 21:21
 _display_name: pla-0.2
 bottom_layer_speed: 20
 bottom_thickness: 0.3
-brim_line_count: 5
 cool_head_lift: false
 cool_min_feedrate: 10
 cool_min_layer_time: 15

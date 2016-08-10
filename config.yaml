@@ -9,7 +9,8 @@ api:
 appearance:
   color: white
   name: Chang-Yi's Prusa i3
-feature: {}
+feature:
+  sdSupport: false
 gcodeViewer: {}
 plugins:
   announcements:
@@ -74,6 +75,7 @@ printerProfiles:
       width: 180.0
 serial:
   autoconnect: true
+  maxCommunicationTimeouts: {}
   port: /dev/ttyACM0
   timeout: {}
 server:
