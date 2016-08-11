@@ -9,19 +9,31 @@ api:
 appearance:
   color: red
   name: Space Taz 5
-feature: {}
-gcodeViewer: {}
 events:
   subscriptions:
+  - command: 'youtube-upload --client-secrets=/home/pi/client-secrets-youtube-upload.json
+      --title="Timelapse: {gcode}" --playlist="3D printing timelapses" --description="Timelapse
+      of {gcode}, printed on space-taz5@HSBNE by Octoprint" --tags="reprap,timelapse,octoprint,hsbne,taz5"
+      "{movie}"'
+    debug: false
+    event: MovieDone
+    type: system
   - command: wget -O /dev/null http://themes.hsbne.org/playmp3.php?nickname=space-taz5
     debug: false
     event: PrintDone
     type: system
+feature:
+  sdSupport: false
+gcodeViewer: {}
 plugins:
   announcements:
     channels:
       _important:
         read_until: 1460575175
+  cost:
+    cost_per_hour: '0'
+    cost_per_meter: '0.5'
+    currency: AUD$
   cura:
     cura_engine: /usr/local/bin/cura_engine
   discovery:
@@ -29,6 +41,12 @@ plugins:
     upnpUuid: 1699e2f0-c433-44fd-9846-dabe8c92c6f8
   slack:
     _config_version: 3
+    bot_icon_emoji: ':printer:'
+    bot_username: space-taz5
+    print_events:
+      PrintFailed:
+        Enabled: false
+    webhook_url: https://hooks.slack.com/services/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
   softwareupdate:
     _config_version: 4
     checks:
@@ -69,7 +87,8 @@ printerProfiles:
       origin: lowerleft
       width: 290.0
 serial:
-  autoconnect: true
+  baudrate: 115200
+  maxCommunicationTimeouts: {}
   port: /dev/ttyACM0
   timeout: {}
 server:
@@ -80,7 +99,7 @@ server:
   secretKey: tn9hOOfKqptjJv6x23M5BXgflxrDwAN7
 slicing:
   defaultProfiles:
-    cura: ngen_medium-quality
+    cura: abs_medium-quality
 system:
   actions:
   - action: shutdown
@@ -116,3 +135,9 @@ webcam:
   ffmpeg: /usr/bin/avconv
   snapshot: http://127.0.0.1:8080/?action=snapshot
   stream: /webcam/?action=stream
+  timelapse:
+    fps: 25
+    options:
+      interval: 10
+    postRoll: 0
+    type: timed

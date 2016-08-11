@@ -4,6 +4,16 @@ guest:
   password: 0b9251a3935daa1a743ef31759ad2237152949112fda42575374c2337d83a07132b89b6bb04ff782f7a76b21fc51ce075e3b2e7b83ac261b684b75708d6e2645
   roles:
   - user
+  settings:
+    interface:
+      language: _default
+hsbne:
+  active: true
+  apikey: null
+  password: 26ed13b6189b1dbfc14a4b8d8bf476d5c70dca4c605ed90c8c0e83fd8e8febf38212ed5cddc131d5dd6ac1789715cef3436db6ef8c82b490b8ce083903e90b49
+  roles:
+  - user
+  - admin
   settings: {}
 pelrun:
   active: true
