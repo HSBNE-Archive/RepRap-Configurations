@@ -3,15 +3,6 @@ RepRap Configurations
 
 HSBNE Maintains a number of RepRaps, this repo allows versioning and tweaking of their configs.
 
-## Project Structure
+Most machines have their own named branch; this contains the configuration files and slicing profiles that go in /home/pi/.octoprint on it's Raspberry Pi running an OctoPi image.
 
-    RepRapName/
-     |- ConfigurationName/ (ie Default;Fast;HighQuality)
-         |- configfile.something (ie slic3r, SFACT, Pronterface, Repetier etc)
-
-## Contributing
-
-Stick to whatever convention is detailed above, feel free to suggest a new structure.
-
-If you wish to modify an existing configuration, please attach a comparison photo 
-of before/after to your pull request so you can prove your changes are beneficial.
+This master branch should contain slicing profiles for manually generating gcode, although it's strongly recommended to let OctoPrint do it for you.
