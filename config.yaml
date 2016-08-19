@@ -31,7 +31,7 @@ plugins:
       _important:
         read_until: 1460575175
   cost:
-    cost_per_hour: '0'
+    cost_per_hour: '0.5'
     cost_per_meter: '0.5'
     currency: AUD$
   cura:
@@ -87,6 +87,7 @@ printerProfiles:
       origin: lowerleft
       width: 290.0
 serial:
+  autoconnect: true
   baudrate: 115200
   maxCommunicationTimeouts: {}
   port: /dev/ttyACM0
@@ -132,7 +133,7 @@ temperature:
     extruder: '235'
     name: nGen
 webcam:
-  ffmpeg: /usr/bin/avconv
+  ffmpeg: /home/pi/.octoprint/scripts/ffmpeg-gpu.pl
   snapshot: http://127.0.0.1:8080/?action=snapshot
   stream: /webcam/?action=stream
   timelapse:
@@ -141,3 +142,4 @@ webcam:
       interval: 10
     postRoll: 0
     type: timed
+  watermark: false

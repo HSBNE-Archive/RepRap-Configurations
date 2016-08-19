@@ -128,7 +128,7 @@ fan_full_height: 0.5
 fan_speed: 40
 fan_speed_max: 60
 filament_diameter:
-- 2.85
+- 3
 - false
 - false
 - false
