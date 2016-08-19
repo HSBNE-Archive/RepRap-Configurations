@@ -17,6 +17,10 @@ plugins:
     channels:
       _important:
         read_until: 1460575175
+  cost:
+    cost_per_hour: '0.5'
+    cost_per_meter: '0.3'
+    currency: AUD$
   cura:
     cura_engine: /usr/local/bin/cura_engine
   discovery:
@@ -35,6 +39,7 @@ plugins:
     checks:
       octoprint:
         checkout_folder: /home/pi/OctoPrint
+        type: github_release
   touchui:
     hasCustom: false
     refreshCSS: false
