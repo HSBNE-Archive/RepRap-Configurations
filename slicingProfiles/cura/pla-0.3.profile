@@ -1,5 +1,5 @@
 _description: Imported from changyi-i3.ini on 2016-07-12 21:21
-_display_name: pla-0.3_(faster)
+_display_name: pla-0.3
 bottom_layer_speed: 20
 bottom_thickness: 0.3
 cool_head_lift: false
