@@ -1,5 +1,5 @@
-_description: Imported from ABS_high-speed.ini on 2016-08-10 16:17
-_display_name: ABS_high-speed
+_description: ABS High Speed Support Everywhere
+_display_name: ABS_high-speed_Support
 bottom_layer_speed: 15
 bottom_thickness: 0.425
 brim_line_count: 10
