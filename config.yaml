@@ -100,7 +100,7 @@ server:
   secretKey: tn9hOOfKqptjJv6x23M5BXgflxrDwAN7
 slicing:
   defaultProfiles:
-    cura: abs_medium-quality
+    cura: abs_high-speed
 system:
   actions:
   - action: shutdown
