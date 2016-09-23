@@ -149,7 +149,7 @@ ooze_shield: false
 outer_shell_speed: 45
 overlap_dual: 0.15
 platform_adhesion: none
-print_bed_temperature: 110
+print_bed_temperature: 105
 print_speed: 50
 print_temperature:
 - 250

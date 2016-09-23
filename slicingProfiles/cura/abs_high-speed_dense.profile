@@ -1,11 +1,11 @@
-_description: Imported from ABS_high-quality.ini on 2016-08-10 16:16
-_display_name: ABS_high-quality
+_description: Imported from ABS_high-speed.ini on 2016-08-10 16:17
+_display_name: ABS_high-speed_dense
 bottom_layer_speed: 15
 bottom_thickness: 0.425
 brim_line_count: 10
 cool_head_lift: false
 cool_min_feedrate: 10
-cool_min_layer_time: 20
+cool_min_layer_time: 15
 end_gcode:
 - 'M400
 
@@ -133,7 +133,7 @@ filament_diameter:
 - false
 - false
 filament_flow: 100.0
-fill_density: 20
+fill_density: 40
 fill_overlap: 15
 first_layer_width_factor: 125
 fix_horrible_extensive_stitching: false
@@ -141,12 +141,12 @@ fix_horrible_union_all_type_a: true
 fix_horrible_union_all_type_b: false
 fix_horrible_use_open_bits: false
 follow_surface: false
-infill_speed: 40
-inner_shell_speed: 35
-layer_height: 0.18
+infill_speed: 60
+inner_shell_speed: 55
+layer_height: 0.38
 object_sink: 0.0
 ooze_shield: false
-outer_shell_speed: 30
+outer_shell_speed: 50
 overlap_dual: 0.15
 platform_adhesion: none
 print_bed_temperature: 105
@@ -176,7 +176,7 @@ skirt_gap: 3.0
 skirt_line_count: 3
 skirt_minimal_length: 250
 solid_bottom: true
-solid_layer_thickness: 0.8
+solid_layer_thickness: 1.6
 solid_top: true
 spiralize: false
 start_gcode:
@@ -425,6 +425,6 @@ support_type: lines
 support_xy_distance: 0.7
 support_z_distance: 0.05
 travel_speed: 175
-wall_thickness: 1.0
+wall_thickness: 1.5
 wipe_tower: false
 wipe_tower_volume: 15

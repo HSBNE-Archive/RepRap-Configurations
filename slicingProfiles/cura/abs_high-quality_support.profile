@@ -149,7 +149,7 @@ ooze_shield: false
 outer_shell_speed: 30
 overlap_dual: 0.15
 platform_adhesion: none
-print_bed_temperature: 110
+print_bed_temperature: 105
 print_speed: 50
 print_temperature:
 - 250
@@ -418,12 +418,12 @@ start_gcode:
 
   '
 support: everywhere
-support_angle: 45
+support_angle: 70
 support_dual_extrusion: both
-support_fill_rate: 30
+support_fill_rate: 20
 support_type: lines
 support_xy_distance: 0.7
-support_z_distance: 0.05
+support_z_distance: 0.09
 travel_speed: 175
 wall_thickness: 1.0
 wipe_tower: false
